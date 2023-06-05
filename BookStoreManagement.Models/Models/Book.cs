@@ -1,4 +1,5 @@
-﻿using BookStoreManagement.Interfaces.Models;
+﻿using BookStoreManagement.Exceptions.Exceptions;
+using BookStoreManagement.Interfaces.Models;
 using BookStoreManagement.StaticData.StaticData;
 
 namespace BookStoreManagement.Models.Models
@@ -22,7 +23,7 @@ namespace BookStoreManagement.Models.Models
 
                 if (isNotValid)
                 {
-                    throw new Exception();
+                    throw new InvalidBookArgumentException();
                 }
                 _title = value;
             }
@@ -37,7 +38,7 @@ namespace BookStoreManagement.Models.Models
 
                 if (isNotValid)
                 {
-                    throw new Exception();
+                    throw new InvalidBookArgumentException();
                 }
                 _author = value;
             }
@@ -52,7 +53,7 @@ namespace BookStoreManagement.Models.Models
 
                 if (isNotValid)
                 {
-                    throw new Exception();
+                    throw new InvalidBookArgumentException();
                 }
                 _price = value;
             }
@@ -67,7 +68,7 @@ namespace BookStoreManagement.Models.Models
 
                 if (isNotValid)
                 {
-                    throw new Exception();
+                    throw new InvalidBookArgumentException();
                 }
                 _quantity = value;
             }
@@ -82,7 +83,7 @@ namespace BookStoreManagement.Models.Models
 
                 if (isNotValid)
                 {
-                    throw new Exception();
+                    throw new InvalidBookArgumentException();
                 }
                 _description = value;
             }

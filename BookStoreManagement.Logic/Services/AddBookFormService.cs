@@ -1,8 +1,10 @@
-﻿using BookStoreManagement.Interfaces.Factories;
+﻿using BookStoreManagement.Exceptions;
+using BookStoreManagement.Interfaces.Factories;
 using BookStoreManagement.Interfaces.HelperInterfaces;
 using BookStoreManagement.Interfaces.Models;
 using BookStoreManagement.Interfaces.Services;
 using BookStoreManagement.Interfaces.Views;
+using System;
 
 namespace BookStoreManagement.Logic.Services
 {
@@ -10,13 +12,13 @@ namespace BookStoreManagement.Logic.Services
     {
         private readonly IBookFactory _bookFactory;
         private readonly IReader _reader;
-        private readonly IAddBookFormView _addBookFormMenuService;
+        private readonly IAddBookFormView _addBookFormView;
 
-        public AddBookFormService(IBookFactory bookFactory, IReader reader, IAddBookFormView addBookFormMenuService)
+        public AddBookFormService(IBookFactory bookFactory, IReader reader, IAddBookFormView addBookFormView)
         {
             _bookFactory = bookFactory;
             _reader = reader;
-            _addBookFormMenuService = addBookFormMenuService;
+            _addBookFormView = addBookFormView;
         }
 
         public IBook CreateBook(int id)
@@ -28,7 +30,7 @@ namespace BookStoreManagement.Logic.Services
 
             foreach (var property in properties)
             {
-                _addBookFormMenuService.PrintProperty(property.Name);
+                _addBookFormView.PrintProperty(property.Name);
                 var value = _reader.Read();
 
                 try
@@ -36,9 +38,9 @@ namespace BookStoreManagement.Logic.Services
                     var convertedValue = Convert.ChangeType(value, property.PropertyType);
                     property.SetValue(book, convertedValue);
                 }
-                catch (Exception exception)
+                catch(Exception exception) 
                 {
-                    _addBookFormMenuService.PrintPropertyError(property.Name, exception.Message);
+                    _addBookFormView.PrintPropertyError(property.Name, exception.Message);
                     return null;
                 }
             }

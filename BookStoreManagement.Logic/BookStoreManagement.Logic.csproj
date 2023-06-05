@@ -11,6 +11,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\BookStoreManagement.Exceptions\BookStoreManagement.Exceptions.csproj" />
     <ProjectReference Include="..\BookStoreManagement.Interfaces\BookStoreManagement.Interfaces.csproj" />
     <ProjectReference Include="..\BookStoreManagement.Models\BookStoreManagement.Models.csproj" />
     <ProjectReference Include="..\BookStoreManagement.StaticData\BookStoreManagement.StaticData.csproj" />

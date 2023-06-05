@@ -7,6 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\BookStoreManagement.Exceptions\BookStoreManagement.Exceptions.csproj" />
     <ProjectReference Include="..\BookStoreManagement.Interfaces\BookStoreManagement.Interfaces.csproj" />
     <ProjectReference Include="..\BookStoreManagement.StaticData\BookStoreManagement.StaticData.csproj" />
   </ItemGroup>

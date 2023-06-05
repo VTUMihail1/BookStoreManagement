@@ -11,11 +11,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BookStoreManagement.Models"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BookStoreManagement.Logic", "BookStoreManagement.Logic\BookStoreManagement.Logic.csproj", "{4C3260F4-CF12-4F37-B40B-7DEF9EF37B65}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookStoreManagement.StaticData", "BookStoreManagement.StaticData\BookStoreManagement.StaticData.csproj", "{89C5D974-C2DD-4077-B2A2-A85B0C285EE7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BookStoreManagement.StaticData", "BookStoreManagement.StaticData\BookStoreManagement.StaticData.csproj", "{89C5D974-C2DD-4077-B2A2-A85B0C285EE7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookStoreManagement.OnConfiguration", "BookStoreManagement.OnConfiguration\BookStoreManagement.OnConfiguration.csproj", "{0C049C60-6A2F-4112-8128-A89F6904C48A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BookStoreManagement.OnConfiguration", "BookStoreManagement.OnConfiguration\BookStoreManagement.OnConfiguration.csproj", "{0C049C60-6A2F-4112-8128-A89F6904C48A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookStoreManagement.UnitTests", "BookStoreManagement.UnitTests\BookStoreManagement.UnitTests.csproj", "{9BFF8B9D-02FD-4008-8461-29A2D6AB2C1A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BookStoreManagement.UnitTests", "BookStoreManagement.UnitTests\BookStoreManagement.UnitTests.csproj", "{9BFF8B9D-02FD-4008-8461-29A2D6AB2C1A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookStoreManagement.Exceptions", "BookStoreManagement.Exceptions\BookStoreManagement.Exceptions.csproj", "{33A068CC-B83A-4830-95AE-7FBF5DA19B43}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -51,6 +53,10 @@ Global
 		{9BFF8B9D-02FD-4008-8461-29A2D6AB2C1A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9BFF8B9D-02FD-4008-8461-29A2D6AB2C1A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9BFF8B9D-02FD-4008-8461-29A2D6AB2C1A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{33A068CC-B83A-4830-95AE-7FBF5DA19B43}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{33A068CC-B83A-4830-95AE-7FBF5DA19B43}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{33A068CC-B83A-4830-95AE-7FBF5DA19B43}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{33A068CC-B83A-4830-95AE-7FBF5DA19B43}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
