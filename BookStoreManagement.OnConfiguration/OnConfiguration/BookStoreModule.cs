@@ -32,7 +32,7 @@ namespace BookStoreManagement.OnConfiguration.OnConfiguration
             Bind<IGetKeywordView>().To<GetKeywordView>().InSingletonScope();
             Bind<IAddBookFormView>().To<AddBookFormView>().InSingletonScope();
             Bind<IBookDisplayView>().To<BookDisplayView>().InSingletonScope();
-            Bind<IBookFileService>().To<BookFileServices>().InSingletonScope();
+            Bind<IBookFileService>().To<BookFileService>().InSingletonScope();
             Bind<IGetKeywordService>().To<GetKeywordService>().InSingletonScope();
             Bind<IAddBookFormService>().To<AddBookFormService>().InSingletonScope();
             Bind<IBookDisplayService>().To<BookDisplayService>().InSingletonScope();

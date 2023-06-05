@@ -4,13 +4,13 @@ using BookStoreManagement.Logic.FileServices;
 
 namespace BookStoreManagement.Logic.Services
 {
-    public class BookFileServices : IBookFileService
+    public class BookFileService : IBookFileService
     {
         private readonly IFileReader _fileReader;
         private readonly IFileWriter _fileWriter;
         private IList<IBook> _books;
 
-        public BookFileServices(IFileReader fileReader, IFileWriter fileWriter)
+        public BookFileService(IFileReader fileReader, IFileWriter fileWriter)
         {
             _fileReader = fileReader;
             _fileWriter = fileWriter;
