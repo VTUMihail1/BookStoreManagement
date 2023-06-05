@@ -21,7 +21,7 @@ namespace BookStoreManagement.OnConfiguration.OnConfiguration
     {
         public override void Load()
         {
-            Bind<IBook>().To<Book>().InSingletonScope();
+            Bind<IBook>().To<Book>();
             Bind<IReader>().To<Reader>().InSingletonScope();
             Bind<IWriter>().To<Writer>().InSingletonScope();
             Bind<IEngine>().To<Engine>().InSingletonScope();
