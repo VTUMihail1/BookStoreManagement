@@ -1,5 +1,5 @@
-﻿using BookStoreManagement.Interfaces.FileServices;
-using BookStoreManagement.Interfaces.Models;
+﻿using BookStoreManagement.Interfaces.Models;
+using BookStoreManagement.Interfaces.Services;
 using BookStoreManagement.Logic.FileServices;
 
 namespace BookStoreManagement.Logic.Services
@@ -24,6 +24,11 @@ namespace BookStoreManagement.Logic.Services
             }
 
             return _books;
+        }
+
+        public void AddBook(IBook book)
+        {
+            _books.Add(book);
         }
 
         public void SaveAllBooks()

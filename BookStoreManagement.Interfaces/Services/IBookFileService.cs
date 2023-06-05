@@ -1,6 +1,6 @@
 ﻿using BookStoreManagement.Interfaces.Models;
 
-namespace BookStoreManagement.Interfaces.FileServices
+namespace BookStoreManagement.Interfaces.Services
 {
     /// <summary>
     /// Represents a service for managing book data in a file.
@@ -12,6 +12,12 @@ namespace BookStoreManagement.Interfaces.FileServices
         /// </summary>
         /// <returns>A list of book instances implementing the IBook interface.</returns>
         IList<IBook> GetAllBooks();
+
+        /// <summary>
+        /// Add a book to the collection
+        /// </summary>
+        /// <param name="book">A book object that will be added to the collection</param>
+        void AddBook(IBook book);
 
         /// <summary>
         /// Saves all books to the file.

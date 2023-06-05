@@ -1,5 +1,4 @@
-﻿using BookStoreManagement.Interfaces.FileServices;
-using BookStoreManagement.Interfaces.Models;
+﻿using BookStoreManagement.Interfaces.Models;
 using BookStoreManagement.Interfaces.Services;
 
 namespace BookStoreManagement.Logic.Services
@@ -27,7 +26,7 @@ namespace BookStoreManagement.Logic.Services
 
             if(book is not null)
             {
-                _books.Add(book);
+                _bookFileServices.AddBook(book);
                 return true;
             }
             return false;
