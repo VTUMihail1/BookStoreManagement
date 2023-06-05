@@ -5,7 +5,7 @@ namespace BookStoreManagement.Interfaces.FileServices
     /// <summary>
     /// Represents a service for managing book data in a file.
     /// </summary>
-    public interface IBookFileServices
+    public interface IBookFileService
     {
         /// <summary>
         /// Retrieves all books from the file.

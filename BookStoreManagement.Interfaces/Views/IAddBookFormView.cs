@@ -3,7 +3,7 @@
     /// <summary>
     /// Represents a service for displaying and printing book form-related information.
     /// </summary>
-    public interface IAddBookFormViewService
+    public interface IAddBookFormView
     {
         /// <summary>
         /// Prints the name of a property.

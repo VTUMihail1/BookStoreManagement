@@ -6,10 +6,10 @@ namespace BookStoreManagement.Logic.Services
 {
     public class GetKeywordService : IGetKeywordService
     {
-        private readonly IGetKeywordViewService _getKeywordMenuService;
+        private readonly IGetKeywordView _getKeywordMenuService;
         private readonly IReader _reader;
 
-        public GetKeywordService(IGetKeywordViewService getKeywordMenuService, IReader reader)
+        public GetKeywordService(IGetKeywordView getKeywordMenuService, IReader reader)
         {
             _getKeywordMenuService = getKeywordMenuService;
             _reader = reader;

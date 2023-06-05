@@ -3,12 +3,12 @@ using BookStoreManagement.Interfaces.Views;
 
 namespace BookStoreManagement.Logic.MenuServices
 {
-    public class AddBookFormViewService : IAddBookFormViewService
+    public class AddBookFormView : IAddBookFormView
     {
         private readonly IWriter _writer;
         private readonly ICleaner _cleaner;
 
-        public AddBookFormViewService(IWriter writer, ICleaner cleaner)
+        public AddBookFormView(IWriter writer, ICleaner cleaner)
         {
             _writer = writer;
             _cleaner = cleaner;

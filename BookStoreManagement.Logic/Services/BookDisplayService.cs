@@ -7,12 +7,12 @@ namespace BookStoreManagement.Logic.Services
 {
     public class BookDisplayService : IBookDisplayService
     {
-        public readonly IList<IBook> _books;
         private readonly IGetKeywordService _getKeywordService;
+        public readonly IList<IBook> _books;
 
-        public BookDisplayService(IBookFileServices getAllBooksList, IGetKeywordService getKeywordService)
+        public BookDisplayService(IBookFileService bookFileService, IGetKeywordService getKeywordService)
         {
-            _books = getAllBooksList.GetAllBooks();
+            _books = bookFileService.GetAllBooks();
             _getKeywordService = getKeywordService;
         }
 

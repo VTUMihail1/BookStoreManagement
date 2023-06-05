@@ -5,12 +5,12 @@ using BookStoreManagement.StaticData.StaticData;
 
 namespace BookStoreManagement.Logic.MenuServices
 {
-    public class BookDisplayViewService : IBookDisplayViewService
+    public class BookDisplayView : IBookDisplayView
     {
         private readonly IWriter _writer;
         private readonly ICleaner _cleaner;
 
-        public BookDisplayViewService(IWriter writer, ICleaner cleaner)
+        public BookDisplayView(IWriter writer, ICleaner cleaner)
         {
             _writer = writer;
             _cleaner = cleaner;
@@ -24,7 +24,7 @@ namespace BookStoreManagement.Logic.MenuServices
 
             foreach (var book in books)
             {
-                string message = string.Format("{0,-5} | {1,-50} | {2,-50} | {3,-5} | {4,-8} | {5,-100}",
+                string message = string.Format("{0,-5} | {1,-50} | {2,-50} | {3,-8:c} | {4,-8} | {5,-100}",
                     book.Id, book.Title, book.Author, book.Price, book.Quantity, book.Description);
                 _writer.WriteLine(message);
             }
@@ -32,7 +32,7 @@ namespace BookStoreManagement.Logic.MenuServices
 
         public void PrintValue(decimal value)
         {
-            string message = $"Total Bookstore Value: ${value}\n\n";
+            string message = $"Total Bookstore Value: ${value}\n";
             _cleaner.Clear();
             _writer.WriteLine(message);
         }

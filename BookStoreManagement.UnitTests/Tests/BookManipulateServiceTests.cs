@@ -13,7 +13,7 @@ namespace BookStoreManagement.UnitTests.Controllers
     public class BookManipulateServiceTests
     {
         private IBookManipulateService _bookManipulateService;
-        private Mock<IBookFileServices> _mockBookFileServices;
+        private Mock<IBookFileService> _mockBookFileServices;
         private Mock<ICalculateDiscountService> _mockCalculateDiscountService;
         private Mock<IAddBookFormService> _mockAddBookFormService;
 
@@ -21,7 +21,7 @@ namespace BookStoreManagement.UnitTests.Controllers
         [SetUp]
         public void Setup()
         {
-            _mockBookFileServices = new Mock<IBookFileServices>();
+            _mockBookFileServices = new Mock<IBookFileService>();
             _mockCalculateDiscountService = new Mock<ICalculateDiscountService>();
             _mockAddBookFormService = new Mock<IAddBookFormService>();
 

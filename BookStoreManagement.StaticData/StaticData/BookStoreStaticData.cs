@@ -17,7 +17,7 @@
         public const string TableHeader = "ID    " +
             "| Title                                              " +
             "| Author                                             " +
-            "| Price " +
+            "| Price    " +
             "| Quantity " +
             "| Description     ";
 

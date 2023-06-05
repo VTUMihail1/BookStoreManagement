@@ -7,10 +7,10 @@ namespace BookStoreManagement.Logic.Core
     public class Engine : IEngine
     {
         private readonly IBookStoreManagementController _bookStoreManagementController;
-        private readonly IBooksMainViewService _booksMainViewService;
+        private readonly IBooksMainView _booksMainViewService;
         private readonly IReader _reader;
 
-        public Engine(IBookStoreManagementController bookStoreManagementController, IBooksMainViewService booksMainViewService, IReader reader)
+        public Engine(IBookStoreManagementController bookStoreManagementController, IBooksMainView booksMainViewService, IReader reader)
         {
             _bookStoreManagementController = bookStoreManagementController;
             _booksMainViewService = booksMainViewService;

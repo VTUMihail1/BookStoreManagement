@@ -3,7 +3,7 @@
     /// <summary>
     /// Represents a service for displaying book manipulation-related information in the view.
     /// </summary>
-    public interface IBookManipulateViewService
+    public interface IBookManipulateView
     {
         /// <summary>
         /// Prints the result of adding a book.

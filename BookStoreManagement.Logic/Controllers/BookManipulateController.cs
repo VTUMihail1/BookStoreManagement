@@ -6,30 +6,30 @@ namespace BookStoreManagement.Logic.Controllers
     public class BookManipulateController : IBookManipulateController
     {
         private readonly IBookManipulateService _bookManipulateServices;
-        private readonly IBookManipulateViewService _bookManipulateViewServices;
+        private readonly IBookManipulateView _bookManipulateView;
 
-        public BookManipulateController(IBookManipulateService bookManipulateServices, IBookManipulateViewService bookManipulateViewServices)
+        public BookManipulateController(IBookManipulateService bookManipulateServices, IBookManipulateView bookManipulateView)
         {
             _bookManipulateServices = bookManipulateServices;
-            _bookManipulateViewServices = bookManipulateViewServices;
+            _bookManipulateView = bookManipulateView;
         }
 
         public void AddBook()
         {
             bool isValid = _bookManipulateServices.AddBook();
-            _bookManipulateViewServices.PrintAdd(isValid);
+            _bookManipulateView.PrintAdd(isValid);
         }
 
         public void ApplyDiscount()
         {
             _bookManipulateServices.ApplyDiscount();
-            _bookManipulateViewServices.PrintDiscount();
+            _bookManipulateView.PrintDiscount();
         }
 
         public void Save()
         {
             _bookManipulateServices.Save();
-            _bookManipulateViewServices.PrintSave();
+            _bookManipulateView.PrintSave();
         }
     }
 }

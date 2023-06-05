@@ -3,7 +3,7 @@
     /// <summary>
     /// Represents a service for displaying the main view of the books application.
     /// </summary>
-    public interface IBooksMainViewService
+    public interface IBooksMainView
     {
         /// <summary>
         /// Prints the main view of the books application.

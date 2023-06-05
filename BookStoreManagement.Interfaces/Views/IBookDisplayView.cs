@@ -5,7 +5,7 @@ namespace BookStoreManagement.Interfaces.Views
     /// <summary>
     /// Represents a service for displaying book-related information in the view.
     /// </summary>
-    public interface IBookDisplayViewService
+    public interface IBookDisplayView
     {
         /// <summary>
         /// Prints the details of a collection of books.

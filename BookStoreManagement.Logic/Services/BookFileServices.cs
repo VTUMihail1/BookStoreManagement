@@ -4,7 +4,7 @@ using BookStoreManagement.Logic.FileServices;
 
 namespace BookStoreManagement.Logic.Services
 {
-    public class BookFileServices : IBookFileServices
+    public class BookFileServices : IBookFileService
     {
         private readonly IFileReader _fileReader;
         private readonly IFileWriter _fileWriter;

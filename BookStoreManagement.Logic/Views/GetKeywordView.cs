@@ -4,12 +4,12 @@ using BookStoreManagement.StaticData.StaticData;
 
 namespace BookStoreManagement.Logic.MenuServices
 {
-    public class GetKeywordViewService : IGetKeywordViewService
+    public class GetKeywordView : IGetKeywordView
     {
         private readonly IWriter _writer;
         private readonly ICleaner _cleaner;
 
-        public GetKeywordViewService(IWriter writer, ICleaner cleaner)
+        public GetKeywordView(IWriter writer, ICleaner cleaner)
         {
             _writer = writer;
             _cleaner = cleaner;

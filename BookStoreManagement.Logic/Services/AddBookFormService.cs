@@ -10,9 +10,9 @@ namespace BookStoreManagement.Logic.Services
     {
         private readonly IBookFactory _bookFactory;
         private readonly IReader _reader;
-        private readonly IAddBookFormViewService _addBookFormMenuService;
+        private readonly IAddBookFormView _addBookFormMenuService;
 
-        public AddBookFormService(IBookFactory bookFactory, IReader reader, IAddBookFormViewService addBookFormMenuService)
+        public AddBookFormService(IBookFactory bookFactory, IReader reader, IAddBookFormView addBookFormMenuService)
         {
             _bookFactory = bookFactory;
             _reader = reader;
@@ -24,7 +24,7 @@ namespace BookStoreManagement.Logic.Services
             var book = _bookFactory.CreateBook();
             var type = typeof(IBook);
             var properties = type.GetProperties().Skip(1);
-            book.Id = ++id;
+            book.Id = id;
 
             foreach (var property in properties)
             {
@@ -35,13 +35,6 @@ namespace BookStoreManagement.Logic.Services
                 {
                     var convertedValue = Convert.ChangeType(value, property.PropertyType);
                     property.SetValue(book, convertedValue);
-
-                    bool isNotValid = property is null;
-
-                    if (isNotValid)
-                    {
-                        throw new Exception();
-                    }
                 }
                 catch (Exception exception)
                 {

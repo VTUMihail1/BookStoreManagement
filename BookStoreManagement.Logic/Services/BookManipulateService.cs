@@ -8,21 +8,22 @@ namespace BookStoreManagement.Logic.Services
     {
         private readonly ICalculateDiscountService _calculateDiscountService;
         private readonly IAddBookFormService _addBookFormService;
-        private readonly IBookFileServices _bookFileServices;
-        private IList<IBook> _books;
+        private readonly IBookFileService _bookFileServices;
+        private readonly IList<IBook> _books;
 
-        public BookManipulateService(IBookFileServices bookFileServices, ICalculateDiscountService calculateDiscountService, IAddBookFormService addBookFormService)
+        public BookManipulateService(IBookFileService bookFileService, ICalculateDiscountService calculateDiscountService, IAddBookFormService addBookFormService)
         {
             _calculateDiscountService = calculateDiscountService;
             _addBookFormService = addBookFormService;
-            _bookFileServices = bookFileServices;
-            _books = bookFileServices.GetAllBooks();
+            _bookFileServices = bookFileService;
+            _books = bookFileService.GetAllBooks();
         }
 
         public bool AddBook()
         {
-            int id = _books.Max(x => x.Id);
-            var book = _addBookFormService.CreateBook(id);
+            var id = _books.Max(x => x.Id);
+            var newId = ++id;
+            var book = _addBookFormService.CreateBook(newId);
 
             if(book is not null)
             {
