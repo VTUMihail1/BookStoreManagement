@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\BookStoreManagement.Interfaces\BookStoreManagement.Interfaces.csproj" />
+    <ProjectReference Include="..\BookStoreManagement.StaticData\BookStoreManagement.StaticData.csproj" />
+  </ItemGroup>
+
+</Project>

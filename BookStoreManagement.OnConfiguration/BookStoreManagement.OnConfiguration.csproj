@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Ninject" Version="3.3.6" />
+    <PackageReference Include="Ninject.Extensions.Factory" Version="3.3.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\BookStoreManagement.Interfaces\BookStoreManagement.Interfaces.csproj" />
+    <ProjectReference Include="..\BookStoreManagement.Logic\BookStoreManagement.Logic.csproj" />
+    <ProjectReference Include="..\BookStoreManagement.Models\BookStoreManagement.Models.csproj" />
+  </ItemGroup>
+
+</Project>
