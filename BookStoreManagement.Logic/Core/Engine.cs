@@ -24,13 +24,6 @@ namespace BookStoreManagement.Logic.Core
             {
                 var key = _reader.ReadKey();
                 _bookStoreManagementController.Manage(key);
-
-                bool didNotMissClick = key.Key >= ConsoleKey.D1 && key.Key <= ConsoleKey.D6;
-
-                if (didNotMissClick)
-                {
-                    _booksMainViewService.PrintMainView();
-                }
             }
         }
     }
