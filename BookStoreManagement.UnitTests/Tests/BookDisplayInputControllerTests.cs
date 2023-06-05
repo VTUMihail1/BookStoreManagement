@@ -12,6 +12,7 @@ namespace BookStoreManagement.UnitTests.Tests
         [SetUp]
         public void SetUp()
         {
+            _mockBookDisplayController = new Mock<IBookDisplayController>();
             _bookDisplayInputController = new BookDisplayInputController(_mockBookDisplayController.Object);
         }
 

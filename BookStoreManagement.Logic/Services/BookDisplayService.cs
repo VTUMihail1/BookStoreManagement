@@ -11,8 +11,8 @@ namespace BookStoreManagement.Logic.Services
 
         public BookDisplayService(IBookFileService bookFileService, IGetKeywordService getKeywordService)
         {
-            _books = bookFileService.GetAllBooks();
             _getKeywordService = getKeywordService;
+            _books = bookFileService.GetAllBooks();
         }
 
         public IEnumerable<IBook> DisplayAllBooks()

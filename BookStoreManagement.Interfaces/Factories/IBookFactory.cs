@@ -6,10 +6,11 @@ namespace BookStoreManagement.Interfaces.Factories
     /// Represents a factory for creating book objects.
     /// </summary>
     public interface IBookFactory
-    {/// <summary>
-     /// Creates a new book instance.
-     /// </summary>
-     /// <returns>The created book instance.</returns>
+    {
+        /// <summary>
+        /// Creates a new book instance.
+        /// </summary>
+        /// <returns>The created book instance.</returns>
         IBook CreateBook();
     }
 }

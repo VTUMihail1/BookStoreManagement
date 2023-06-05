@@ -13,6 +13,7 @@ namespace BookStoreManagement.UnitTests.Services
         [SetUp]
         public void SetUp()
         {
+            _mockBookManipulateController = new Mock<IBookManipulateController>();
             _bookManipulateInputController = new BookManipulateInputController(_mockBookManipulateController.Object);
         }
 

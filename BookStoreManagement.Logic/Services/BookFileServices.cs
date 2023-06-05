@@ -22,7 +22,6 @@ namespace BookStoreManagement.Logic.Services
             {
                 _books = _fileReader.Read();
             }
-
             return _books;
         }
 

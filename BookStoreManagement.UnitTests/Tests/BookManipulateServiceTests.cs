@@ -1,4 +1,5 @@
-﻿using BookStoreManagement.Interfaces.Services;
+﻿using BookStoreManagement.Interfaces.Models;
+using BookStoreManagement.Interfaces.Services;
 using BookStoreManagement.Interfaces.Views;
 using BookStoreManagement.Logic.Controllers;
 using BookStoreManagement.Logic.Services;
@@ -23,7 +24,8 @@ namespace BookStoreManagement.UnitTests.Controllers
             _mockBookFileServices = new Mock<IBookFileService>();
             _mockCalculateDiscountService = new Mock<ICalculateDiscountService>();
             _mockAddBookFormService = new Mock<IAddBookFormService>();
-
+            var bookList = new List<IBook>() { new Book() };
+            _mockBookFileServices.Setup(x => x.GetAllBooks()).Returns(bookList);
             _bookManipulateService = new BookManipulateService(
                 _mockBookFileServices.Object, _mockCalculateDiscountService.Object, _mockAddBookFormService.Object);
         }

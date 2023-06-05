@@ -1,10 +1,8 @@
-﻿using BookStoreManagement.Exceptions;
-using BookStoreManagement.Interfaces.Factories;
+﻿using BookStoreManagement.Interfaces.Factories;
 using BookStoreManagement.Interfaces.HelperInterfaces;
 using BookStoreManagement.Interfaces.Models;
 using BookStoreManagement.Interfaces.Services;
 using BookStoreManagement.Interfaces.Views;
-using System;
 
 namespace BookStoreManagement.Logic.Services
 {
