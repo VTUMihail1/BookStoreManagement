@@ -17,6 +17,7 @@ namespace BookStoreManagement.Logic.MenuServices
         {
             var message = $"Error setting value for {property}: {exception}";
 
+            _cleaner.Clear();
             _writer.WriteLine(message);
         }
 

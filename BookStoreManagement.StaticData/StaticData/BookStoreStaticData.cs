@@ -25,7 +25,7 @@
             
         public const string AddedSuccesfullyMessage = "New book added successfully.";
           
-        public const string AddedUnsuccesfullyMessage = "New book didnt meet the requirments";
+        public const string AddedUnsuccesfullyMessage = "\nNew book didnt meet the requirments";
              
         public const string DiscountMessage = "Discounts applied successfully.";
            

@@ -22,13 +22,12 @@ namespace BookStoreManagement.Logic.MenuServices
             if(isValid)
             {
                 message = BookStoreStaticData.AddedSuccesfullyMessage;
+                _cleaner.Clear();
             }
             else
             {
                 message = BookStoreStaticData.AddedUnsuccesfullyMessage;
             }
-
-            _cleaner.Clear();
             _writer.WriteLine(message);
         }
 
